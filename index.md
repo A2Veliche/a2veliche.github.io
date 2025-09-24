@@ -3,7 +3,7 @@ Dear reader,
 Welcome to some personal trivia in relation to my engineering interests.
 
 I hope by the time you leave this page you will be filled with an immense sense of purpose and satisfaction.
-If on the other hand you depart with an increased sense of existential dread, I am sinceely sorry, I will do my best to write in English next time.
+If, on the other hand, you depart with an aching sense of existential dread, I am sincerely sorry; I will do my best to write in English next time.
 
 This blog has certain rules I will strive to follow.
 1. No smoking.
