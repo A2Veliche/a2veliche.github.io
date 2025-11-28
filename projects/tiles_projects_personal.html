@@ -1,0 +1,227 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Andrei Veliche: Projects</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+
+						<ul class="navigation-bar">
+							<li><a href="../index.html">Home</a></li>
+							<li><a href="../index.html#about">About Me</a></li>
+							<li><a href="../projects.html">Project Gallery</a></li>
+							<li><a href="../research.html">Research</a></li>
+							<li><a href="../index.html#resume">Resume</a></li>
+						</ul>
+
+						<article id="feeder">
+							<h2 class="major">Automatic Cat Feeder</h2>
+
+							<div class="grid-container">
+								<div class="grid-img grid-left">
+									<div class="img_wrap">
+										<img class="img_img" src="../images/Automatic Cat Feeder/feeder_cat.jpg"/>
+										<p class="img_overlay">We left for a 5-day vacation and Zephyr needed rationed sustinance.</p>
+									</div>
+								</div>
+								<div class="grid-img grid-right">
+									<div class="img_wrap">
+										<img class="img_img" src="../images/Automatic Cat Feeder/feeder_CAD.jpg"/>
+										<p class="img_overlay">A low-complexity CAD model based around a stepper motor.</p>
+									</div>
+								</div>
+								<div class="grid-img grid-left" style="align-self: end;">
+									<div class="img_wrap">
+										<img class="img_img" src="../images/Automatic Cat Feeder/feeder_brainstorm-collage.png"/>
+										<p class="img_overlay">Using my meat computer to figure out a solution.</p>
+									</div>
+								</div>
+								<div class="grid-img grid-right">
+									<div class="img_wrap">
+										<img class="img_img" src="../images/Automatic Cat Feeder/feeder_testing-3.jpg"/>
+										<p class="img_overlay">Preliminary testing of the apparatus.</p>
+									</div>
+								</div>
+							</div>
+
+							<h3>Results</h3>
+							<p>The apparatus successfully dispensed all 5 meals and our cat did not starve to death.</p>
+						</article>
+
+						<article id="capstone">
+							<h2 class="major">Capstone Project: Flight Simulator Chair</h2>
+
+							<div class="grid-container">
+
+								<div class="grid-right">
+									<h3>Aesthetic Spinning Top</h3>
+									<p> I made a satisfying desk toy.</p>
+									<p> A stainless steel cylinder was fitted into a hollow brass cylinder using thermal press fitting.</p>
+									<p> Turning was done on a Tormach lathe and the final result was polished.</p>
+								</div>
+							</div>
+
+							<div class="grid-container">
+
+								<div class="grid-text grid-left">
+									<h3>Benchtop 2-in-1 Toolpost</h3>
+									<p>When inserting a cutting tool in a 5C collet (used on the Tormach mills), the collet needs to be secured in place while a torque wrench is used to tighten it properly.</p>
+									<p> The challenge was to design a toolholder to hold 2 different collet sizes as to economize for space on the worktable.</p>
+								</div>
+								
+								<div class="grid-img grid-right">
+									<div class="img_wrap">
+										<img class="img_img" src="../images/Machining/machining_toolholder-sketch.png"/>
+										<p class="img_overlay">Designing the toolholder by sketching. A requirement is to accomodate 2 different collet sizes.</p>
+									</div>
+								</div>
+
+								<div class="grid-img grid-right">
+									<div class="img_wrap">
+										<img class="img_img" src="../images/Machining/machining_toolholder-mounted-2.jpg"/>
+										<p class="img_overlay">Toolholder mounted on a worktable.</p>
+									</div>
+								</div>
+							</div>
+
+						</article>
+
+						<!-- Inverted Self-Balancing Pendulum -->
+						<article id="pendulum">
+							<h2 class="major">Self-balancing inverted pendulum</h2>
+
+							<h3>Project Summary</h3>
+							<ul>
+								<li>Made a self-balancing inverted pendulum on a cart because it was cool.</li>
+								<li>Total budget was less than $500.</li>
+								<li>Machined all over, assembled in my garage at home.</li>
+							</ul>
+
+							<div class="grid-container">
+								<div class="grid-img grid-left">
+									<div class="img_wrap">
+										<iframe width="630" height="450" src="https://www.youtube.com/embed/0dboMWIbN-k"></iframe>
+									</div>
+								</div>
+								<div class="grid-img grid-right">
+									<div class="img_wrap">
+										<iframe width="300" height="450" src="https://www.youtube.com/embed/iQwe4ZnMEd0"></iframe>
+									</div>
+								</div>
+							</div>
+
+							<div class="grid-container">
+								<div class="grid-text grid-left">
+									<h3>Functional Requirements</h3>
+									<ul>
+										<li>Fits horizontally on a work bench (less than 1m long).</li>
+										<li>Designed for a pendulum weighing up to 1kg.</li>
+										<li>Last more than 10000 cycles without breaking.</li>
+										<li>Capable of swing-up maneuvres.</li>
+									</ul>
+									<p>I also used several components I had on hand which were a Raspberry Pi 2B, and a VEX Mini CIM motor.</p>
+								</div>
+								<div class="grid-img grid-right">
+									<div class="img_wrap">
+										<img class="img_img" src="../images/Balancing Pendulum/pendulum_coding_power-requirements.jpg"/>
+										<p class="img_overlay">Using a Python physics simulation to approximate the DC motor power draw.</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="grid-container">
+								<div class="grid-text grid-right">
+									<h3>Brainstorming & Design</h3>
+									<p>The round linear rails were self-built out of low-cost COTS. The two rails would not need to be adjusted, but instead all the precision would follow from the machined aluminium end blocks.</p>
+									<p>Motor speed reduction would be achieved through a chain-sprocket geartrain at one end.</p>
+									<p>A rotary encoder would measure motor velocity, and another would measure the pendulum tilt angle.</p>
+								</div>
+								<div class="grid-img grid-left">
+									<div class="img_wrap">
+										<img class="img_img" src="../images/Balancing Pendulum/pendulum_CAD-old.jpg"/>
+										<p class="img_overlay">Fusion 360 assembly showing initial design.</p>
+									</div>
+								</div>
+								<div class="grid-img grid-left">
+									<div class="img_wrap">
+										<img class="img_img" src="../images/Balancing Pendulum/pendulum_CAD-full.jpg"/>
+										<p class="img_overlay">SolidWorks assembly showing final design.</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="grid-container">
+								<div class="grid-left">
+									<h3>Component Analysis - Felxured Carriage</h3>
+									<p>Flexure mechanisms were pursued to reduce tolerance requirements for the linear stage.</p>
+									<p>One set of mechanical flexures were built into the 3D printed bearing blocks and relieved misalignment in the rail separation. </p>
+									<p>Another set was waterjetted out of the steel carriage plate to take up errors in rail parallelism.</p>
+								</div>
+								<div class="grid-img grid-right">
+									<div class="img_wrap">
+										<img class="img_img" src="../images/Balancing Pendulum/pendulum_flexure_collage.jpg"/>
+										<p class="img_overlay">Running FEA on various bearing mount flexure designs to optimize flexure geometries.</p>
+									</div>
+								</div>
+								<div class="grid-img grid-left"  style="align-self: end;">
+									<div class="img_wrap">
+										<img class="img_img" src="../images/Balancing Pendulum/pendulum_flexure_collage2.jpg"/>
+										<p class="img_overlay">Running simulations on the carriage chassis flexure to find the optimal tab width.</p>
+									</div>
+								</div>
+								<div class="grid-img grid-right">
+									<div class="img_wrap">
+										<img class="img_img" src="../images/Balancing Pendulum/pendulum_flexure_waterjetted.jpg"/>
+										<p class="img_overlay">Installing the flexure-based chassis.</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="grid-container">
+								<div class="grid-right grid-text">
+									<h3>Component Analysis - Belt Tensioner</h3>
+									<p>The first iteration for a timing belt tensioner used a separate strip to provide tooth engagement between the two loose ends. A bolt from the top would clamp into a metal plate and onto the top of the connecting piece. This strategy sucked becasue four bolts needed to be tightened at once for maximum force to be applies, plus the tensioning screw tore through the belt multiple times.</p>
+									<p>A second approach used two clamps mahcined out of aluminium, which would be pulled into each other via two socket head bolts. This approach applied much more tension and took less time to configure, however there was still the issue of securing the belt to either side of the clamp.</p>
+								</div>
+								<div class="grid-img grid-left" style="top: 0">
+									<div class="img_wrap">
+										<img class="img_img" src="../images/Balancing Pendulum/pendulum_tensioner_model1.jpg"/>
+										<p class="img_overlay">The initial design used a single bolt from above to apply tension to the belt.</p>
+									</div>
+								</div>
+								<div class="grid-img grid-left" >
+									<div class="img_wrap">
+										<img class="img_img" src="../images/Balancing Pendulum/pendulum_tensioner_model2.jpg"/>
+										<p class="img_overlay">The improved tesioner came in two pieces and tensioned using two bolts.</p>
+									</div>
+								</div>
+							</div>
+
+						</article>
+
+					</div>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>

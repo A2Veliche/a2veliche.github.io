@@ -287,35 +287,35 @@
 			};
 
 		// Articles.
-			$main_articles.each(function() {
+			// $main_articles.each(function() {
 
-				var $this = $(this);
+			// 	var $this = $(this);
 
-				// Close.
-					$('<div class="close">Close</div>')
-						.appendTo($this)
-						.on('click', function() {
-							// location.hash = '';
-							var filename = window.location.href.split('/').pop().split('#')[0];
-							console.log(filename);
-							console.log(filename.slice(0,14));
-							if (filename.slice(0,14) === "tiles_projects"){
-								location.replace("projects.html");
-							}
-							else if (filename.slice(0,14) === "tiles_research"){
-								location.replace("research.html");
-							}
-							else {
-								location.hash='';
-							}
-						});
+			// 	// Close.
+			// 		$('<div class="close">Close</div>')
+			// 			.appendTo($this)
+			// 			.on('click', function() {
+			// 				// location.hash = '';
+			// 				var filename = window.location.href.split('/').pop().split('#')[0];
+			// 				console.log(filename);
+			// 				console.log(filename.slice(0,14));
+			// 				if (filename.slice(0,14) === "tiles_projects"){
+			// 					location.replace("projects.html");
+			// 				}
+			// 				else if (filename.slice(0,14) === "tiles_research"){
+			// 					location.replace("research.html");
+			// 				}
+			// 				else {
+			// 					location.hash='';
+			// 				}
+			// 			});
 
-				// Prevent clicks from inside article from bubbling.
-					$this.on('click', function(event) {
-						event.stopPropagation();
-					});
+			// 	// Prevent clicks from inside article from bubbling.
+			// 		$this.on('click', function(event) {
+			// 			event.stopPropagation();
+			// 		});
 
-			});
+			// });
 
 			$window.on('hashchange', function(event) {
 

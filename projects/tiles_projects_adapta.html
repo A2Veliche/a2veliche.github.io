@@ -1,0 +1,214 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Andrei Veliche: Projects</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+
+						<ul class="navigation-bar">
+							<li><a href="../index.html">Home</a></li>
+							<li><a href="../index.html#about">About Me</a></li>
+							<li><a href="../projects.html">Project Gallery</a></li>
+							<li><a href="../research.html">Research</a></li>
+							<li><a href="../index.html#resume">Resume</a></li>
+						</ul>
+
+						<article id="adapta_omnicradle">
+							<h2 class="major">One-size-fits-all Smartphone Fixture</h2>
+
+							<h3>What the Customer Wanted </h3>
+							<ol>
+								<li>To run functionality tests on refurbished smartphones using our MATT robot.</li>
+								<li>Fit multiple fixtures on the same platform and run functionality tests in parallel.</li>
+								<li>Functionality tests should consider the cameras, speakers, screen, side buttons and haptics.</li>
+							</ol>
+
+							<div class="grid-container">
+								<div class="grid-left">
+									<h3> What We Delivered</h3>
+									<p>Our smart fixtures were designed to be operated single-handedly and quickly, reducing setup time to less than 7 seconds per device.</p>
+									<p>The fixtures were robust enough to withstand multiple weeks of testing yet modular enough to allow for a quick swapping of worn parts.</p>
+									<p>We aimed to primarily accomodate the iPhone lineup but extended to some newer Samsung devices too.</p>
+								</div>
+								<div class="grid-img grid-right">
+									<div class="img_wrap">
+										<img class="img_img" src="../images/Adapta/Omnicradle/final_setup_example.jpg"/>
+										<p class="img_overlay">A MATT Extended delta robot with five Omnicradle fixtures.</p>
+									</div>
+								</div>
+								<div class="grid-img grid-left" style="align-self: end;">
+									<div class="img_wrap"  width="80%">
+										<img class="img_img" src="../images/Adapta/Omnicradle/assembled_unit_topview.jpg" alt=""/>
+										<p class="img_overlay" style="text-align:center">The phone is squeezed between a cable holder and two sets of servo-actuated sliding rails that access the side buttons.</p>
+									</div>
+								</div>
+								<div class="grid-img grid-right">
+									<div class="img_wrap"  width="80%">
+										<img class="img_img" src="../images/Adapta/Omnicradle/assembled_unit_bottm.jpg" alt=""/>
+										<p class="img_overlay" style="text-align:center">The squeezing mechanism is composed of two linear tension springs and a four-bar-linkage.</p>
+									</div>
+								</div>
+								<div class="grid-img grid-left">
+									<div class="img_wrap"  height="400">
+										<img class="img_img" src="../images/Adapta/Omnicradle/assembly_lineup.jpeg" alt=""/>
+										<p class="img_overlay" style="text-align:center">Assembling a dozen units at a time required careful process planning and stock management.</p>
+									</div>
+								</div>
+								<div class="grid-img grid-right">
+									<div class="img_wrap" height="400">
+										<iframe width="100%" height="300"
+											referrerpolicy='strict-origin-when-cross-origin'
+											src="https://youtube.com/embed/aGFMQYyUKW8"
+											title="YouTube video player"
+											frameborder="0"
+											allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+											allowfullscreen>
+										</iframe>
+										<!-- <iframe height="360" width="100%" src="https://youtube.com/shorts/aGFMQYyUKW8?feature=share"></iframe> -->
+									</div>
+								</div>
+								
+							</div>
+
+							<div class="grid-container">
+								<div class="grid-text grid-right">
+									<h3> What worked and what didn't </h3>
+									<p>Thanks to the power of FDM 3D printing, I was able to iterate through dozens of designs before converging to a dependable one.</p>
+									<p>The most challenging sub-module was responsible for actuating the mute switch on iPhones. It needed to be confined in a tight space and be dependable enough not to cause false positives during tesing. Compliant mechanisms were explored in depth but they proved to be inadequate in an industrial environment.</p>
+								</div>
+								<div class="grid-img grid-left">
+									<div class="img_wrap">
+										<img class="img_img" src="../images/Adapta/Omnicradle/design_brainstorming.jpg"/>
+										<p class="img_overlay">Lineup of initial cradle geometries that failed.</p>
+									</div>
+								</div>
+							</div>
+							<div class="grid-container">
+								<div class="grid-text grid-left">
+									<h3> What was documentated </h3>
+									<p>To confront the inevitability of miscommunication, I also prepared documentation on how to assemble the mechanical components and electrical wiring.</p>
+									<p>All part markings corresponded to their ID in the bill of materials. This helped reference their version information as well as material composition and variant number.</p>
+								</div>
+								<div class="grid-img grid-right">
+									<div class="img_wrap">
+										<img class="img_img" src="../images/Adapta/Omnicradle/assembly_manual_2.png"/>
+										<p class="img_overlay">Heavy use of exploded views for a LEGO-style assembly guide.</p>
+									</div>
+								</div>
+							</div>
+
+						</article>
+
+						<article id="adapta_ypsomed">
+							<h2 class="major">Insulin Pump Cartridge Simulator</h2>
+
+							<h3>Design Requirements</h3>
+							<ul>
+								<li>Simulate the viscoelastic reaction force of an insulin cartridge while the insulin pump is running.</li>
+								<li>Actuation in a range of 5 cm with a resolution of 10 microns and a maximum force of 30 Newtons.</li>
+								<li>Run continuously for a few days on-end without losing pressure.</li>
+							</ul>
+						
+							<div class="grid-container">
+								<div class="grid-left grid-text">
+									<h3>Structural Elements</h3>
+									<p>We used two linear piezoelectric motors in parallel to push on a rod that plunged into the insulin pump in place of the cartridge. Force feedback was established by placing a load cell in-between the rod and the motor shafts. </p>
+									<p>The structure is comprised of aluminum rails fitted with 3D-printed PCB rafts and safety panels. An aluminum plate constrains the two motors and the linear bearing to ensure proper alignment with the rod.</p>
+								</div>
+								<div class="grid-img grid-right">
+									<div class="img_wrap">
+										<img class="img_img" src="../images/Adapta/Ypsomed/tile_ypsomed.png"/>
+										<p class="img_overlay">The insulin pump can be slid into the holder with ease. </p>
+									</div>
+								</div>
+							</div>
+
+							<div class="grid-container">
+								<div class="grid-right grid-text">
+									<h3>Control Strategy</h3>
+									<p> Piezoelectric motors are tough to control when they are coupled together because of the tight tolerances required. Nanometer-scale resolution implies a sensitivity to nanometer-level misalignment! Therefore, we used compliance in our design to avoid over-constraining the assembly. </p>
+									<p>Furthermore, the load cell was preloaded by a spring mechanism to avoid backlash in the force feedback signal.</p>
+								</div>
+								<div class="grid-img grid-left">
+									<div class="img_wrap">
+										<img class="img_img" src="../images/Adapta/Ypsomed/iso_view.jpeg"/>
+										<p class="img_overlay">. </p>
+									</div>
+								</div>
+							</div>
+
+						</article>
+
+						<article id="adapta_matt3v0">
+							<h2 class="major">Designing a Cheaper MATT Robot</h2>
+
+							<h3>How it started</h3>
+							<ul>
+								<li>The current MATT robots were made from bent sheet metal which was expensive and relied on experienced manual labor.</li>
+								<li>I proposed to base the design around flat metal sheets and extruded aluminum posts instead.</li>
+								<li>The same aesthetics and geometry needed to be preserved while the reduction in cost of production needed to be great enough to be considered in our low volume production setting.</li>
+							</ul>
+						
+							<div class="grid-container">
+								<div class="grid-left grid-text">
+									<h3>Designing a custom AL Extrusion</h3>
+									<p>The name of the game is to simplify the geometry such as to have the minimal number of cores, a small number of tight-tolerance faces, and preferrably no sharp angles.</p>
+									<p>Extensive work was done to prepare the design for manufacturing, and this involved collaborating with aluminum manufacturers in Europe to find a low-volume solution adaptable to our prototyping needs.</p>
+								</div>
+								<div class="grid-img grid-right">
+									<div class="img_wrap">
+										<img class="img_img" src="../images/Adapta/MATT3v0/iterations_extrusion.jpeg"/>
+										<p class="img_overlay">The multiple iterations on the 60-degree corner extrusion. </p>
+									</div>
+								</div>
+								<div class="grid-img grid-left">
+									<div class="img_wrap">
+										<img class="img_img" src="../images/Adapta/MATT3v0/extrusion_drawing.png"/>
+										<p class="img_overlay">Final extrusion geometry to be manufactured. </p>
+									</div>
+								</div>
+								<div class="grid-img grid-right">
+									<div class="img_wrap">
+										<img class="img_img" src="../images/Adapta/MATT3v0/matt3v0_assembly_drawing.png"/>
+										<p class="img_overlay">Validating against every other machine component to ensure a proper final assembly. </p>
+									</div>
+								</div>
+							</div>
+
+							<div class="grid-container">
+								<div class="grid-left grid-text">
+									<h3>Results</h3>
+									<p> We managed to halve the bill of materials both in terms of part number and overall cost, having more potential savings with increased volume.</p>
+									<p> </p>
+								</div>
+							</div>
+
+						</article>
+
+					</div>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>

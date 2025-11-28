@@ -15,18 +15,213 @@
 
 				<!-- Main -->
 					<div id="main">
+						
+					<ul class="navigation-bar">
+						<li><a href="../index.html">Home</a></li>
+						<li><a href="../index.html#about">About Me</a></li>
+						<li><a href="../projects.html">Project Gallery</a></li>
+						<li><a href="../research.html">Research</a></li>
+						<li><a href="../index.html#resume">Resume</a></li>
+					</ul>
 
-					<!-- Control Board PCB -->
-					<article id="#mesodyne_PCB">
-						<h2 class="major">Air Intake Control Board</h2>
-						<p></p>
-						<span class="image main">
-							<img src="../images/Mesodyne/pcb_img1.png" alt="" />
-							<p style="text-align:center"> </p>
-						</span>
+					<!-- Fulfil Physics -->
+					<article id="fulfil_physics">
+						<h2 class="major">Targeting Algorithm for Bag Dispenses</h2>
+
+						<h3>Project Goals</h3>
+						<ol>
+							<li>Predict how a stock item would fall into a bag given its physical properties and dispense speed.</li>
+							<li>Find ways to avoid item collisions with each other or with bag walls.</li>
+							<li>Implement an efficient instance of the algorithm to be run in less than 10ms.</li>
+						</ol>
+
+						<div class="grid-container">
+							<div class="grid-left">
+								<h3> Empirical Data Collection </h3>
+								<p>A dozen items were dispensed at different speeds and heights and the landing distance was recorded each time. This was done into a granular media to absorb the impact energy.</p>
+								<p>Each item was weighed then placed on a custom torsional pendulum to determine its specific moment of inertia.</p>
+								<p></p>
+							</div>
+							<div class="grid-img grid-right">
+								<div class="img_wrap">
+									<img class="img_img" src="../images/Fulfil/Physics/falling_montage.png"/>
+									<p class="img_overlay">Tracking the motion of a pasta box as it falls into a granular media.</p>
+								</div>
+							</div>
+							<div class="grid-img grid-left" style="align-self: end;">
+								<div class="img_wrap"  width="80%">
+									<img class="img_img" src="../images/Fulfil/Physics/pendulum.jpg" alt=""/>
+									<p class="img_overlay" style="text-align:center">Using a 3D printed torsional pendulum to measure moments of inertia of items.</p>
+								</div>
+							</div>
+							<div class="grid-img grid-right">
+								<div class="img_wrap"  width="80%">
+									<img class="img_img" src="../images/Fulfil/Physics/falling_montage_2.png" alt=""/>
+									<p class="img_overlay" style="text-align:center">A red bull can dispensed at a lower speed shows more pronounced slipping.</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="grid-container">
+							<div class="grid-text grid-right">
+								<h3> Developing a Physics Model </h3>
+								<p>Every dispense problem was abstracted to a rectangle rolling off the edge of a spinning disk, with the exception of spherical items. </p>
+								<p>Composed of both a static and kinetic friction regime, the model accounted for stick-slip interaction between the item and the conveyor.</p>
+								<p>Dynamic equations were derived through the use of Lagrangian mechanics.</p>
+							</div>
+							<div class="grid-img grid-left">
+								<div class="img_wrap">
+									<img class="img_img" src="../images/Fulfil/Physics/free_body_diagram.png"/>
+									<p class="img_overlay">An FBD of a prismatic object being dispensed at a constant speed.</p>
+								</div>
+							</div>
+							<div class="grid-img grid-rigth">
+								<div class="img_wrap"  width="80%">
+									<img class="img_img" src="../images/Fulfil/Physics/equations.png" alt=""/>
+									<p class="img_overlay" style="text-align:center">Static friction and kinetic friction regime dynamics.</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="grid-container">
+							<div class="grid-left">
+								<h3> Model Verification with Simulations </h3>
+								<p>The physics model above was verified in 4 different ways:</p>
+								<ul>
+									<li>SolidWorks Motion Studio</li>
+									<li>Python numerical integration using Scipy</li>
+									<li>MuJoCo toolbox and URDF descriptions</li>
+									<li>Direct comparison against empirical data</li>
+								</ul>
+								<p>Chaotic behavior was detected through the use of bifurcation diagrams and varying theoretical friction coefficient values.</p>
+								<p>There was strong agreement between the model and data, but liquid containers showed the most deviation from theory.</p>
+							</div>
+							<div class="grid-img grid-right">
+								<div class="img_wrap"  width="80%">
+									<img class="img_img" src="../images/Fulfil/Physics/mujoco_scene.png" alt=""/>
+									<p class="img_overlay" style="text-align:center">Using MuJoCo to test virtual dispenses and compare to analytical solutions.</p>
+								</div>
+							</div>
+							<div class="grid-img grid-left"  style="align-self: end">
+								<div class="img_wrap"  width="80%">
+									<img class="img_img" src="../images/Fulfil/Physics/model_verification_chex.png" alt=""/>
+									<p class="img_overlay" style="text-align:center">Verifying a Python probabilistic physics model against empirical data.</p>
+								</div>
+							</div>
+							<div class="grid-img grid-right">
+								<div class="img_wrap"  width="80%">
+									<img class="img_img" src="../images/Fulfil/Physics/model_continuity.png" alt=""/>
+									<p class="img_overlay" style="text-align:center">Checking model continuity, also notice the bifurcation at low friction values.</p>
+								</div>
+							</div>
+						</div>
+
 					</article>
 
-					</div>
+					
+
+					<!-- Fulfil Bead -->
+					<article id="fulfil_bead">
+						<h2 class="major">Timing Belt Joining Bead</h2>
+
+						<h3>Project Goals</h3>
+
+						<ol>
+							<li>Design a compact joining bead for use with rubber-coated nylon rope, for both ambient and freezing temperatures.</li>
+							<li>Increase joining bead tensile strength from 15kg to 30kg to improve component lifetime.</li>
+							<li>Reduce manufacturing and assembly costs through an in-house additive manufacturing approach.</li>
+						</ol>
+
+						<div class="grid-container">
+							<div class="grid-text grid-left">
+								<h3>Assessment</h3>
+								<p> Reasons for component failure: </p>
+								<ul>
+									<li>Set screws used to hold the ends together inside the joining bead would instigate fractures under high tensile loads.</li>
+									<li>The inner nylon cord would slip inside the polyurethane sheath.</li>
+									<li>Adhesion surface area was too small due to space constraints.</li>
+								</ul>
+							</div>
+							<div class="grid-img grid-right">
+								<div class="img_wrap">
+									<img class="img_img" src="../images/Fulfil/JoiningBead/cracked2.jpg"/>
+									<p class="img_overlay">Cracking due to temperature-induced stresses and cyclic fatigue.</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="grid-container">
+							<div class="grid-img grid-left">
+								<div class="img_wrap">
+									<img class="img_img" src="../images/Fulfil/JoiningBead/initial_design.jpg"/>
+									<p class="img_overlay">Using set screws as crimps - 100N capacity.</p>
+								</div>
+							</div>
+							<div class="grid-right">
+								<h3>Iterative Design</h3>
+								<!-- <p>Prototypes were manufactured using the Bambu X1 Carbon, in PLA, ABS, and PC.</p> -->
+								<p>Concept # 1: Using set screws to fasten against the belt ends, but this failed due to adhesion limits.</p>
+								<p>Concept # 2: Using internal capstan friction by way of wrapping the cord ends inside the bead, but this too failed due to layer separation.</p>
+								<p>Concept # 3: Relying on bolt compression against the internal bead walls to compensate for the cord's elastic deformation under tension.</p>
+							</div>
+							<div class="grid-img grid-left">
+								<div class="img_wrap">
+									<img class="img_img" src="../images/Fulfil/JoiningBead/intermediate_design.jpg"/>
+									<p class="img_overlay">Using capstan friction - 150N capacity.</p>
+								</div>
+							</div>
+							<div class="grid-img grid-right">
+								<div class="img_wrap">
+									<img class="img_img" src="../images/Fulfil/JoiningBead/final_design.png"/>
+									<p class="img_overlay">Using bolt compression and hoop stress - 220N capacity.</p>
+								</div>
+							</div>
+
+						</div>
+
+						<p></p>
+						<h3>Conclusion</h3>
+						The bead lifetime exceeded 4 months of continuous operation in freezing temperatures, marking a ~300% improvement.
+
+					</article>
+
+					<!-- Fulfil Hot Knife -->
+					<article id="fulfil_hotknife">
+						<h2 class="major">Hot Knife Apparatus</h2>
+						<h3>Project Summary</h3>
+						<p>There was a need to add chamfers to 3000 injection molded tongue pins without ordering an additional mold, and a hot knife jig was discovered to be the most efficient tool for the job.</p>
+
+						<div class="grid-container">
+							
+							<div class="grid-left">
+								<h3>Apparatus Description</h3>
+								<p>Precision: the plastic part is located underneath the blade with metal dowel pins.</p>
+								<p>Ergonomics: a lever allows the operator to adjust blade temperature and cutting speeds in a single stroke.</p>
+								<p>Efficiency: a metal brush makes the knife self-cleaning and ready for the next cut.</p>
+								<p>Safety: a blade guard keeps fingers out and a blower fan diverts toxic gasses away from eyes.</p>
+								
+							</div>
+							<div class="grid-img grid-right">
+								<div class="img_wrap">
+									<img class="img_img" src="../images/Fulfil/HotKnife/img_isoview.png"/>
+									<p class="img_overlay">The benchtop-mounted hot knife jig is equipped with a fan to divert toxic fumes.</p>
+								</div>
+							</div>	
+							<div class="grid-img grid-left">
+								<div class="img_wrap">
+									<img class="img_img" src="../images/Fulfil/HotKnife/img_tile_2.png"/>
+									<p class="img_overlay">Lowering the handle triggers the hot knife and heats up the blade as it sinks into the platic part. </p>
+								</div>
+							</div>
+							<div class="grid-img grid-right">
+								<div class="img_wrap">
+									<img class="img_img" src="../images/Fulfil/HotKnife/img_topview_2.png"/>
+									<p class="img_overlay">Raising the handle causes the blade to clean itself of plastic residue against the metal brush.</p>
+								</div>
+							</div>
+
+						</div>
+					</article>
 
 			</div>
 
@@ -38,7 +233,7 @@
 			<script src="../assets/js/browser.min.js"></script>
 			<script src="../assets/js/breakpoints.min.js"></script>
 			<script src="../assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="../assets/js/main.js"></script>
 
 	</body>
 </html>
