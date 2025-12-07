@@ -1,0 +1,246 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Andrei Veliche: Projects</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+
+						<ul class="navigation-bar">
+							<li><a href="../index.html">Home</a></li>
+							<li><a href="../index.html#about">About Me</a></li>
+							<li><a href="../projects.html">Project Gallery</a></li>
+							<li><a href="../research.html">Research</a></li>
+							<li><a href="../index.html#resume">Resume</a></li>
+						</ul>
+
+						<!-- Mesodyne Control PCB -->
+						<article id="mesodyne_PCB">
+							<h2 class="major">Air Intake Control PCB</h2>
+							<!-- <p style="color: red">The disclosure of the following information has been curated and approved by Mesodyne Inc.</p> -->
+
+							<h3>Problem Statement</h3>
+							<p>To develop a miniature blower module that sustains propane combustion within a LightCell power generation unit.</p>
+
+							<div class="grid-container">
+								<div class="grid-left">
+									<h3>Iterations and Prototyping</h3>
+									<p>Three different controllers were used in the prototyping stage: Arduino Due, Adafruit nRF52, and the Arduino Nano.</p>
+									<p>A Sensirion flow meter provided feedback for PID flow rate control.</p>
+									<p>Each iteration slowly reduced overall power requirements from 48W to 7W through improved blower selection and more efficient air flow paths.</p>
+								</div>
+								<div class="grid-img grid-right">
+									<div class="img_wrap">
+										<img class="img_img" src="../images/Mesodyne/PCB/img8.jpg"/>
+										<p class="img_overlay">First Arduino Nano-based PCB with integrated motor drivers and ADCs.</p>
+									</div>
+								</div>
+								<div class="grid-img grid-left"  style="align-self: end">
+									<div class="img_wrap">
+										<img class="img_img" src="../images/Mesodyne/PCB/img3.jpg"/>
+										<p class="img_overlay">Combining the blower fan, motor driver, control circuit, and digital flow sensor.</p>
+									</div>
+								</div>
+								<div class="grid-img grid-right">
+									<div class="img_wrap">
+										<img class="img_img" src="../images/Mesodyne/PCB/img1.jpg"/>
+										<p class="img_overlay">Testing component compatibility with an Arduino Mega shield.</p>
+									</div>
+								</div>	
+								
+							</div>
+
+							<div class="grid-container">
+								<div class="grid-img grid-left">
+									<div class="img_wrap">
+										<img class="img_img" src="../images/Mesodyne/PCB/img10.jpg"/>
+										<p class="img_overlay">Control board version 2 uses an embedded STM32 chip. The banana is for scale.</p>
+									</div>
+								</div>
+								<div class="grid-text grid-right">
+									<h3>Final PCB and Testing</h3>
+									<p>The final PCB was built around the STM32F07 family of MCUs due to their accessibility. Onboard are the following components.</p>
+									<ul>
+										<li>Thermocouple amplifiers for temperature sensing.</li>
+										<li>Analog-to-digital converters for thermistors.</li>
+										<li>32MB of flash memory for data collection.</li>
+										<li>Power MOSFETS for turning on 12V systems.</li>
+										<li>Motor driver for the blower.</li>
+										<li>I2C, SCL, and ST-LINK communication lines.</li>
+									</ul>
+
+									<p>A major challenge was to subdue turbulent fluctuations in airflow right after ignition, casued by rapid thermal heating and acoustic resonance. A combination of PID tuning and acoustic dampening was used to achieve stability.</p>
+								</div>
+								<div class="grid-img grid-left" style="align-self: end">
+									<div class="img_wrap">
+										<img class="img_img" src="../images/Mesodyne/PCB/img11.jpg"/>
+										<p class="img_overlay">Turbulent flow rates transition into a steady stream following ignition.</p>
+									</div>
+								</div>	
+							</div>
+
+						</article>
+
+						<!-- Mesodyne Calorimeter -->
+						<article id="mesodyne_calorimeter">
+							<h2 class="major">Thermal Emissions Calorimeter</h2>
+
+							<h3>Project Goals</h3>
+							<ul>
+								<li>Our benchtop burner needed a device to measure radiative heat with an accuracy of 5W.</li>
+								<li>A calorimeter with a high-absorptivity coating was proposed to transfer all blackbody radiation into the thermal fluid.</li>
+							</ul>
+
+							<div class="grid-container">
+								<div class="grid-left">
+									<h3>Design Methodology</h3>
+									<ul>
+										<li>Ice water is used as the thermal fluid to maintain a low operating temperatures.</li>
+										<li>A cooling jacket insulates the calorimeter from convective losses to the atmosphere and provides a predictable boundary condition.</li>
+										<li>High-precision thermistors are used to measure temperatures witin 0.01 degrees Celsius.</li>
+									</ul>
+								</div>
+								<div class="grid-img grid-right">
+									<div class="img_wrap">
+										<img class="img_img" src="../images/Mesodyne/Calorimeter/img1.png"/>
+										<p class="img_overlay">Showing a cross-section and assembly view of the calorimeter.</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="grid-container">
+								<div class="grid-img grid-left">
+									<div class="img_wrap">
+										<img class="img_img" src="../images/Mesodyne/Calorimeter/img_tile.jpg"/>
+										<p class="img_overlay">Showing internal fluid channels underneath the radiation collector.</p>
+									</div>
+								</div>
+								<div class="grid-right">
+									<h3>Construction</h3>
+									<p>The fluid system use a single centrifugal pump to provide variable flow rates for both the cooling jacket and collector.</p>
+									<p>Cooling channels in the collector block were 5-axis machined out of aluminium.</p>
+									<p>An SLS 3D printed cooling jacket enshrouded 5 out of 6 sides of the collector for maximum insulation.</p>
+									<p>Quick hose disconnects and bubble vents allowed for rapid apparatus setup.</p>
+								</div>
+								<div class="grid-img grid-left">
+									<div class="img_wrap">
+										<img class="img_img" src="../images/Mesodyne/Calorimeter/img6.png"/>
+										<p class="img_overlay">Fluid diagram representing the layout of valves, pumps, gauges, and reservoirs.</p>
+									</div>
+								</div>
+								<div class="grid-img grid-right" style="align-self: end;">
+									<div class="img_wrap">
+										<img class="img_img" src="../images/Mesodyne/Calorimeter/img8.png"/>
+										<p class="img_overlay">The water pump cart on the left, the calorimeter apparatus on the right.</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="grid-container">
+								<div class="grid-left grid-text">
+									<h3>Data Analysis</h3>
+									<p></p>
+									<p>Multi-linear regression was used to separate out conductive and convective heat gains in order to find the final radiative heat value.</p>
+									<p>Model accounts for a total of 6 temperature measurements, 1 heat control, and 2 flow rate controls.</p>
+								</div>
+								<div class="grid-img grid-right">
+									<div class="img_wrap">
+										<img class="img_img" src="../images/Mesodyne/Calorimeter/img2.png"/>
+										<p class="img_overlay">Developing the governing heat equation.</p>
+									</div>
+								</div>
+								<div class="grid-img grid-right">
+									<div class="img_wrap">
+										<img class="img_img" src="../images/Mesodyne/Calorimeter/img5.png"/>
+										<p class="img_overlay">Visual representation of the calorimeter calibration procedure.</p>
+									</div>
+								</div>
+							</div>
+
+						</article>
+
+						
+						<!-- Mesodyne Flexure Post -->
+						<article id="mesodyne_flexure">
+							<h2 class="major">Flexure Stage for Optical Posts</h2>
+
+							<h3>Design Requirements</h3>
+							<ul>
+								<li>To alleviate one translational degree of freedom on a vacuum flange, but simultaneously constrain the other 5.</li>
+								<li>Withstand a vertical load of 100 N.</li>
+								<li>Compatible with optical breadboards and easy to install/adjust.</li>
+							</ul>
+						
+							<div class="grid-container">
+								<div class="grid-left grid-text">
+									<h3>Design Approach</h3>
+									<p>Applying the leaf flexure formula to calculate the total elasticity of the flexure as a function of length, width, and thickness. </p>
+									<p>The optimal dimensions were found by parameter searching over these discrete variables and checking with the machinists.</p>
+								</div>
+								<div class="grid-img grid-right">
+									<div class="img_wrap">
+										<img class="img_img" src="../images/Mesodyne/Flexure/img1.png"/>
+										<p class="img_overlay">Showing the translational degree of compliance. </p>
+									</div>
+								</div>
+							</div>
+
+							<div class="grid-container">
+								<div class="grid-img grid-left">
+									<div class="img_wrap">
+										<img class="img_img" src="../images/Mesodyne/Flexure/img4.jpg"/>
+										<p class="img_overlay">Poor approach: using a plastic jig in a bench vise to drill through individual springs.</p>
+									</div>
+								</div>
+								<div class="grid-right grid-text">
+									<h3>Machining</h3>
+									<p>The aluminium connectors were machined using the advanced cut-to-size-then-drill-some-holes fabrication technique. The leaf flexures on the other hand were the most labor intensive to machine. Spring steel is way less forgiving than aluminum when it comes to drilling holes.</p>
+								</div>
+								<div class="grid-img grid-left">
+									<div class="img_wrap">
+										<img class="img_img" src="../images/Mesodyne/Flexure/img3.jpg"/>
+										<p class="img_overlay">Successful approach: using a mill and sacrificial material to drill through the spring steel.</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="grid-container">
+								<div class="grid-left grid-text">
+									<h3>Final Result</h3>
+									<p>We discovered a minor issue where the thumb screws could not clamp down with enough force when hand tightened, but this was fixed by replacing them with socket head screws, and inserting grip washers in between the aluminum components. </p>
+								</div>
+								<div class="grid-img grid-right">
+									<div class="img_wrap">
+										<img class="img_img" src="../images/Mesodyne/Flexure/img6.jpg"/>
+										<p class="img_overlay">The flexure stage attached to the vacuum flange and mounted on an optical table.</p>
+									</div>
+								</div>
+							</div>
+						</article>
+
+					</div>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>
