@@ -1763,3 +1763,102 @@ input, select, textarea {
 			color:#FFFBE4;
 			text-decoration: none;
 		}
+
+/* ── Mobile-responsive grid ── */
+@media (max-width: 736px) {
+
+	/* Collapse the 2-col grid to a single column */
+	.grid-container {
+		display: flex !important;
+		flex-direction: column !important;
+		gap: 1.2rem;
+	}
+
+	/* All grid cells go full-width */
+	.grid-left,
+	.grid-right,
+	.grid-text,
+	.grid-img,
+	.grid-rigth /* note: typo in source */ {
+		grid-column: unset !important;
+		width: 100% !important;
+		max-width: 100% !important;
+		align-self: unset !important;
+	}
+
+	/* Images stretch to full container width */
+	.img_wrap {
+		width: 100% !important;
+	}
+	.img_img {
+		width: 100% !important;
+		height: auto !important;
+		display: block;
+		border-radius: 4px;
+	}
+
+	/* On touch devices the hover overlay can never be seen,
+	   so surface the caption as a always-visible label */
+	.img_overlay {
+		position: static !important;
+		opacity: 1 !important;
+		background: rgba(0,0,0,0.55) !important;
+		color: #fff !important;
+		font-size: 0.82rem !important;
+		padding: 0.4rem 0.6rem !important;
+		margin: 0 !important;
+		border-radius: 0 0 4px 4px !important;
+		text-align: center !important;
+		transform: none !important;
+		transition: none !important;
+	}
+}
+
+/* ── Tap cursor hint on desktop too ── */
+.img_img { cursor: zoom-in; }
+
+/* ── Lightbox overlay ── */
+#lightbox-overlay {
+	display: none;
+	position: fixed;
+	inset: 0;
+	z-index: 9999;
+	background: rgba(0,0,0,0.9);
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 14px;
+	cursor: zoom-out;
+}
+#lightbox-overlay.active { display: flex; }
+#lightbox-overlay img {
+	max-width: 94vw;
+	max-height: 78vh;
+	object-fit: contain;
+	border-radius: 4px;
+	box-shadow: 0 8px 48px rgba(0,0,0,0.7);
+	cursor: default;
+}
+#lightbox-caption {
+	color: #fff;
+	text-align: center;
+	max-width: 82vw;
+	font-size: 0.9rem;
+	opacity: 0.85;
+	line-height: 1.4;
+}
+#lightbox-close {
+	position: fixed;
+	top: 14px; right: 18px;
+	color: #fff; font-size: 2.2rem;
+	line-height: 1; cursor: pointer;
+	user-select: none; opacity: 0.75;
+}
+#lightbox-close:hover { opacity: 1; }
+
+h2, h2.major {
+    white-space: normal !important;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto;
+}

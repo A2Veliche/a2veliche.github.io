@@ -11,6 +11,58 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/tiles.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	<style>
+		/* ── Lightbox overlay ── */
+		#lightbox-overlay {
+			display: none;
+			position: fixed;
+			inset: 0;
+			z-index: 9999;
+			background: rgba(0,0,0,0.88);
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			gap: 16px;
+			cursor: zoom-out;
+		}
+		#lightbox-overlay.active { display: flex; }
+		#lightbox-overlay img {
+			max-width: 92vw;
+			max-height: 78vh;
+			object-fit: contain;
+			border-radius: 4px;
+			box-shadow: 0 8px 48px rgba(0,0,0,0.7);
+			cursor: default;
+		}
+		#lightbox-caption {
+			color: #fff;
+			text-align: center;
+			max-width: 80vw;
+		}
+		#lightbox-caption h2 {
+			margin: 0 0 6px;
+			font-size: 1.3rem;
+			font-weight: 600;
+		}
+		#lightbox-caption p {
+			margin: 0;
+			opacity: 0.75;
+			font-size: 0.95rem;
+		}
+		#lightbox-close {
+			position: fixed;
+			top: 16px; right: 20px;
+			color: #fff;
+			font-size: 2rem;
+			line-height: 1;
+			cursor: pointer;
+			user-select: none;
+			opacity: 0.8;
+		}
+		#lightbox-close:hover { opacity: 1; }
+		/* Make tile images show a zoom cursor so it's obvious they're clickable */
+		.tiles article .image img { cursor: zoom-in; }
+	</style>
 	</head>
 	<body class="is-preload">
 		<!-- Wrapper -->
@@ -32,7 +84,7 @@
 							<div>
 								<h1>
 									<a href="https://www.adaptarobotics.com/" target="_blank">
-										<img src="images/Adapta/adapta-logo.png" alt="" / width="20%"/>
+										<img src="images/Adapta/adapta-logo.png" alt="" loading="lazy" width="20%"/>
 									</a>
 								</h1>
 							</div>
@@ -40,7 +92,7 @@
 
 								<article class="green">
 									<span class="image">
-										<img src="images/Adapta/Omnicradle/tile_omnicradle.png" alt="" / height=365px>
+										<img src="images/Adapta/Omnicradle/tile_omnicradle.png" alt="" loading="lazy" height=365px>
 									</span>
 									<a href="projects/tiles_projects_adapta.html#adapta_omnicradle">
 										<h2>The Omnicradle</h2>
@@ -52,7 +104,7 @@
 
 								<article class="yellow">
 									<span class="image">
-										<img src="images/Adapta/Ypsomed/tile_ypsomed.png" alt="" / height=365px>
+										<img src="images/Adapta/Ypsomed/tile_ypsomed.png" alt="" loading="lazy" height=365px>
 									</span>
 									<a href="projects/tiles_projects_adapta.html#adapta_ypsomed">
 										<h2>Insulin Pump Cartridge Simulator</h2>
@@ -64,7 +116,7 @@
 
 								<article class="orange">
 									<span class="image">
-										<img src="images/Adapta/MATT3v0/tile_matt3v0.png" alt="" / height=365px>
+										<img src="images/Adapta/MATT3v0/tile_matt3v0.png" alt="" loading="lazy" height=365px>
 									</span>
 									<a href="projects/tiles_projects_adapta.html#adapta_matt3v0">
 										<h2>MATT 3.0 Design</h2>
@@ -89,7 +141,7 @@
 
 								<article class="red">
 									<span class="image">
-										<img src="images/Fulfil/Physics/img_tile.png" alt="" / height=365px>
+										<img src="images/Fulfil/Physics/img_tile.png" alt="" loading="lazy" height=365px>
 									</span>
 									<a href="projects/tiles_projects_fulfil.html#fulfil_physics">
 										<h2>Bag Targeting Physics Simulations</h2>
@@ -101,7 +153,7 @@
 
 								<article class="fgreen">
 									<span class="image">
-										<img src="images/Fulfil/JoiningBead/img_tile.png" alt="" / height=365px>
+										<img src="images/Fulfil/JoiningBead/img_tile.png" alt="" loading="lazy" height=365px>
 									</span>
 									<a href="projects/tiles_projects_fulfil.html#fulfil_bead">
 										<h2>Joining Bead Iterative Design</h2>
@@ -113,7 +165,7 @@
 
 								<article class="cyan">
 									<span class="image">
-										<img src="images/Fulfil/HotKnife/img_tile.png" alt="" / height=365px>
+										<img src="images/Fulfil/HotKnife/img_tile.png" alt="" loading="lazy" height=365px>
 									</span>
 									<a href="projects/tiles_projects_fulfil.html#fulfil_hotknife">
 										<h2>Hot Knife Apparatus</h2>
@@ -136,7 +188,7 @@
 							<section class="tiles">
 								<article class="indigo">
 									<span class="image">
-										<img src="images/Mesodyne/PCB/img_tile.jpg" alt="" / height=365px>
+										<img src="images/Mesodyne/PCB/img_tile.jpg" alt="" loading="lazy" height=365px>
 									</span>
 									<a href="projects/tiles_projects_mesodyne.html#mesodyne_PCB">
 										<h2>Air Intake Control PCB</h2>
@@ -148,7 +200,7 @@
 
 								<article class="coral">
 									<span class="image">
-										<img src="images/Mesodyne/Calorimeter/img_tile.jpg" alt="" / height=365px>
+										<img src="images/Mesodyne/Calorimeter/img_tile.jpg" alt="" loading="lazy" height=365px>
 									</span>
 									<a href="projects/tiles_projects_mesodyne.html#mesodyne_calorimeter">
 										<h2>Thermal Emission Calorimeter</h2>
@@ -160,7 +212,7 @@
 
 								<article class="blue">
 									<span class="image">
-										<img src="images/Mesodyne/Flexure/img_tile.jpg" alt="" / height=365px>
+										<img src="images/Mesodyne/Flexure/img_tile.jpg" alt="" loading="lazy" height=365px>
 									</span>
 									<a href="projects/tiles_projects_mesodyne.html#mesodyne_flexure">
 										<h2>Flexure Stage for Optical Posts</h2>
@@ -183,7 +235,7 @@
 
 								<article class="red">
 									<span class="image">
-										<img src="images/Capstone/flight_mode_chair_closeup.jpeg" alt="" / height=365px>
+										<img src="images/Capstone/flight_mode_chair_closeup.jpeg" alt="" loading="lazy" height=365px>
 									</span>
 									<a href="projects/tiles_projects_NEU.html#capstone">
 										<h2>Flight Simulator Chair</h2>
@@ -217,7 +269,7 @@
 
 								<article class="teal">
 									<span class="image">
-										<img src="images/Balancing Pendulum/tile_pendulum2.png" alt="" / height=365px>
+										<img src="images/Balancing Pendulum/tile_pendulum2.png" alt="" loading="lazy" height=365px>
 									</span>
 									<a href="projects/tiles_projects_personal.html#pendulum">
 										<h2>Self-Balancing Inverted Pendulum</h2>
@@ -229,7 +281,7 @@
 
 								<article class="orange">
 									<span class="image">
-										<img src="images/Automatic Cat Feeder/tile_feeder.png" alt="" / height=365px>
+										<img src="images/Automatic Cat Feeder/tile_feeder.png" alt="" loading="lazy" height=365px>
 									</span>
 									<a href="projects/tiles_projects_personal.html#feeder">
 										<h2>Automatic Cat Feeder</h2>
@@ -251,6 +303,74 @@
 			<script src="assets/js/a_breakpoints.min.js"></script>
 			<script src="assets/js/a_util.js"></script>
 			<script src="assets/js/a_main.js"></script>
+
+		<!-- Lightbox -->
+		<div id="lightbox-overlay" role="dialog" aria-modal="true" aria-label="Image viewer">
+			<span id="lightbox-close" aria-label="Close">&times;</span>
+			<img id="lightbox-img" src="" alt="" />
+			<div id="lightbox-caption">
+				<h2 id="lightbox-title"></h2>
+				<p id="lightbox-desc"></p>
+			</div>
+		</div>
+
+		<script>
+		(function () {
+			var overlay   = document.getElementById('lightbox-overlay');
+			var lbImg     = document.getElementById('lightbox-img');
+			var lbTitle   = document.getElementById('lightbox-title');
+			var lbDesc    = document.getElementById('lightbox-desc');
+			var lbClose   = document.getElementById('lightbox-close');
+
+			function openLightbox(src, title, desc) {
+				lbImg.src       = src;
+				lbImg.alt       = title;
+				lbTitle.textContent = title;
+				lbDesc.textContent  = desc;
+				overlay.classList.add('active');
+				document.body.style.overflow = 'hidden';
+			}
+
+			function closeLightbox() {
+				overlay.classList.remove('active');
+				document.body.style.overflow = '';
+				lbImg.src = '';
+			}
+
+			// Wire up every tile image
+			document.querySelectorAll('.tiles article').forEach(function (article) {
+				var img = article.querySelector('.image img');
+				if (!img) return;
+
+				var titleEl = article.querySelector('a h2');
+				var descEl  = article.querySelector('a .content p');
+				var title   = titleEl ? titleEl.textContent.trim() : '';
+				var desc    = descEl  ? descEl.textContent.trim()  : '';
+
+				img.addEventListener('click', function (e) {
+					e.preventDefault();
+					e.stopPropagation();
+					openLightbox(img.src, title, desc);
+				});
+			});
+
+			// Close on overlay background click
+			overlay.addEventListener('click', function (e) {
+				if (e.target === overlay) closeLightbox();
+			});
+
+			// Close button
+			lbClose.addEventListener('click', closeLightbox);
+
+			// Close on Escape key
+			document.addEventListener('keydown', function (e) {
+				if (e.key === 'Escape') closeLightbox();
+			});
+
+			// Prevent clicks on the enlarged image from closing the overlay
+			lbImg.addEventListener('click', function (e) { e.stopPropagation(); });
+		})();
+		</script>
 
 	</body>
 </html>

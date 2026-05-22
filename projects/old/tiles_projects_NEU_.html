@@ -104,43 +104,6 @@
 			<script src="../assets/js/breakpoints.min.js"></script>
 			<script src="../assets/js/util.js"></script>
 			<script src="../assets/js/main.js"></script>
-		<!-- Lightbox -->
-		<div id="lightbox-overlay" role="dialog" aria-modal="true" aria-label="Image viewer">
-			<span id="lightbox-close" aria-label="Close">&times;</span>
-			<img id="lightbox-img" src="" alt="" />
-			<div id="lightbox-caption"></div>
-		</div>
-		<script>
-		(function () {
-			var overlay = document.getElementById('lightbox-overlay');
-			var lbImg   = document.getElementById('lightbox-img');
-			var lbCapt  = document.getElementById('lightbox-caption');
-			var lbClose = document.getElementById('lightbox-close');
-			function open(src, caption) {
-				lbImg.src = src; lbCapt.textContent = caption;
-				overlay.classList.add('active');
-				document.body.style.overflow = 'hidden';
-			}
-			function close() {
-				overlay.classList.remove('active');
-				document.body.style.overflow = '';
-				lbImg.src = '';
-			}
-			document.querySelectorAll('.img_img').forEach(function (img) {
-				img.setAttribute('loading', 'lazy');
-				var wrap = img.closest('.img_wrap');
-				var ov   = wrap ? wrap.querySelector('.img_overlay') : null;
-				var caption = ov ? ov.textContent.trim() : '';
-				img.addEventListener('click', function (e) {
-					e.stopPropagation(); open(img.src, caption);
-				});
-			});
-			overlay.addEventListener('click', function (e) { if (e.target === overlay) close(); });
-			lbClose.addEventListener('click', close);
-			lbImg.addEventListener('click', function (e) { e.stopPropagation(); });
-			document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
-		})();
-		</script>
 
 	</body>
 </html>
