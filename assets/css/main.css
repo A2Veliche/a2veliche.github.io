@@ -1767,6 +1767,10 @@ input, select, textarea {
 /* ── Mobile-responsive grid ── */
 @media (max-width: 736px) {
 
+	h2{
+	 font-size:19px;
+	}
+
 	/* Collapse the 2-col grid to a single column */
 	.grid-container {
 		display: flex !important;
